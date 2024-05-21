@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biodata</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="Biodata.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html" style="text-decoration: none; color: inherit"
+          >Welcome</a
+        >
+      </div>
+
+      <div class="toggle" onclick="toggleMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <ul>
+        <li><a href="AboutMe.html">About Me</a></li>
+        <li><a href="Biodata.html">Biodata</a></li>
+        <li><a href="Hobby.html">Hobby</a></li>
+        <li><a href="Form.html">Form</a></li>
+      </ul>
+    </nav>
+
+    <div class="animated-border">
+      <div class="container">
+        <div class="header">
+          <img
+            src="https://i.pinimg.com/736x/03/7d/41/037d41ae6941d4a5b41b3b5016272e9d.jpg"
+            alt="Foto Profil"
+            class="profile-photo"
+          />
+          <div class="header-text">
+            <h1>Abrar Imam Satria</h1>
+            <h2>Pelajar/Mahasiswa</h2>
+          </div>
+        </div>
+        <div class="contact-info">
+          <p><strong>Telepon:</strong> 0852-9832-7863-0238</p>
+          <p><strong>Email:</strong> HubungiAbrar@Gmail.com</p>
+          <p>
+            <strong>Alamat:</strong> Jl. bangau sakti no.10 , Bogor, Indonesia.
+          </p>
+        </div>
+        <div class="personal-info">
+          <h3>Informasi Pribadi</h3>
+          <p><strong>Tanggal Lahir:</strong> 31 Februari 2002</p>
+          <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+          <p><strong>Kebangsaan:</strong> Belanda</p>
+        </div>
+        <div class="education">
+          <h3>Pendidikan</h3>
+          <p>
+            <strong>Universitas muhammadiyah yogyakarta</strong> - Teknologi
+            Informasi
+          </p>
+        </div>
+        <div class="experience">
+          <h3>Pengalaman Kerja Kelompok</h3>
+          <p>
+            <strong>Pengembangan Aplikasi Basis Data</strong> - Web Developer,
+            2024 - Sekarang
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="extra-space"></div>
+    <!-- Your JavaScript goes here -->
+    <audio autoplay>
+      <source src="assets/ssstik.io_1715744053636.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script>
+      function toggleMenu() {
+        const toggle = document.querySelector(".toggle");
+        const navbar = document.querySelector(".navbar ul");
+        toggle.classList.toggle("active");
+        navbar.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

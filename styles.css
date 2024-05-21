@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poetsen+One&display=swap');
+
+body {
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: center;  
+}
+
+@keyframes borderAnimation {
+  0% {
+      border-color: red;
+      box-shadow: 0 0 100px rgba(255, 0, 0, 0.8);
+  }
+  33% {
+      border-color: green;
+      box-shadow: 0 0 100px rgba(0, 255, 0, 0.8);
+  }
+  66% {
+      border-color: blue;
+      box-shadow: 0 0 100px rgba(0, 0, 255, 0.8);
+  }
+  100% {
+      border-color: red;
+      box-shadow: 0 0 100px rgba(255, 0, 0, 0.8);
+  }
+}
+
+.animated-border {
+  position: absolute;
+  top: 50%; /* Posisikan ke tengah vertikal */
+  left: 50%; /* Posisikan ke tengah horizontal */
+  transform: translate(-50%, -50%); /* Geser ke tengah secara tepat */
+  width: 600px;
+  height: 300px;
+  border: 5px solid red;
+  animation: borderAnimation 5s infinite;
+  border-radius: 20px;
+  padding: 20px; 
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%; 
+}
+
+.content img {
+  max-height: 100%;
+  border-radius: 10px; 
+}
+
+.button-container {
+  width: calc(50% - 10px); /* Maksimum lebar kontainer tombol adalah 50% dari lebar border */
+  text-align: center;
+}
+
+.button-container button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 13px;
+  cursor: pointer;
+  width: calc(50% - 20px); /* Lebar tombol adalah 100% dari lebar kontainer dikurangi margin */
+  border: 2px solid;
+  border-image: linear-gradient(to right, #2196F3, #4CAF50, #FFEB3B, #FF9800, #F44336);
+  border-image-slice: 1;
+  background-color: #212121; 
+  color: #fff; 
+  transition: background-color 0.3s, color 0.3s; 
+  font-family: "Poetsen One", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+}
+
+.button-container button:hover {
+  background-color: #FFD700; 
+  color: #000000; 
+}
+
+.rainbow-text {
+  font-size: 30px;
+  margin-top: -10px;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@media only screen and (max-width: 576px) {
+  .animated-border {
+    width: 80%; 
+    height: 35vh; 
+  }
+
+  .content img {
+    max-height: 70%; 
+  }
+
+  .rainbow-text {
+    font-size: 10px; 
+  }
+
+  .button-container button{
+    font-size: 8px;
+  }
+
+  .button-container {
+    text-align: center;
+    width: 80%;
+  }
+
+  .button-container button {
+    width: 80%;
+  }
+}

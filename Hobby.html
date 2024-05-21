@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Hobby</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="Hobby.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html" style="text-decoration: none; color: inherit"
+          >Welcome</a
+        >
+      </div>
+      <div class="toggle" onclick="toggleMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <ul>
+        <li><a href="AboutMe.html">About Me</a></li>
+        <li><a href="Biodata.html">Biodata</a></li>
+        <li><a href="Hobby.html">Hobby</a></li>
+        <li><a href="Form.html">Form</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+      <h1>My Hobby</h1>
+      <div class="card-container">
+        <div class="card animated-border">
+          <img
+            src="https://i.pinimg.com/736x/1c/7d/ed/1c7ded6ecfd15add405c0b93c7a2783f.jpg"
+            alt="Hobby 1"
+          />
+          <div class="card-content">
+            <h2>Study</h2>
+            <p>
+              Saat ini saya lebih suka belajar karena banyak tugas, jika tidak
+              ada tugas saya sangat jarang belajar jadi saya berharap banyak
+              tugas aja biar saya rajin belajar.
+            </p>
+          </div>
+        </div>
+        <div class="card animated-border">
+          <img
+            src="https://i.pinimg.com/736x/bd/95/74/bd95742f60f17031e6e10d873ad6289a.jpg"
+            alt="Hobby 2"
+          />
+          <div class="card-content">
+            <h2>Watching</h2>
+            <p>
+              Saya suka nonton film di Netflix tetapi tidak hanya di plaftform
+              netflix saja, saya suka nonton film atau series yang trending di
+              netflix.
+            </p>
+          </div>
+        </div>
+        <div class="card animated-border">
+          <img
+            src="https://i.pinimg.com/736x/fa/65/51/fa65516c2482692fbb00fd3bef24d4a2.jpg"
+            alt="Hobby 3"
+          />
+          <div class="card-content">
+            <h2>badminton</h2>
+            <p>
+              Saya suka main badminton bersama teman teman saya karena membuat
+              tubuh sehat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <audio autoplay>
+      <source
+        src="assets/Lana Del Rey - Dark Paradise - Lyrics.mp3"
+        type="audio/mp3"
+      />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script>
+      function toggleMenu() {
+        const toggle = document.querySelector(".toggle");
+        const navbar = document.querySelector(".navbar ul");
+        toggle.classList.toggle("active");
+        navbar.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

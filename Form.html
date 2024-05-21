@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="Form.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html" style="text-decoration: none; color: inherit"
+          >Welcome</a
+        >
+      </div>
+      <div class="toggle" onclick="toggleMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <ul>
+        <li><a href="AboutMe.html">About Me</a></li>
+        <li><a href="Biodata.html">Biodata</a></li>
+        <li><a href="Hobby.html">Hobby</a></li>
+        <li><a href="Form.html">Form</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="form-container animated-border">
+      <h1>Silahkan isi form dibawah ini:</h1>
+      <form id="myForm">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="gender">Jenis Kelamin:</label>
+        <div class="radio-buttons">
+          <label>
+            <input type="radio" name="gender" value="Laki-laki" required />
+            Laki-laki
+          </label>
+          <label>
+            <input type="radio" name="gender" value="Perempuan" required />
+            Perempuan
+          </label>
+        </div>
+
+        <label for="hobbies">Hobi:</label>
+        <div class="checkboxes">
+          <label>
+            <input type="checkbox" name="hobbies" value="Olahraga" />
+            Olahraga
+          </label>
+          <label>
+            <input type="checkbox" name="hobbies" value="Membaca" />
+            Membaca
+          </label>
+          <label>
+            <input type="checkbox" name="hobbies" value="Menonton Film" />
+            Menonton Film
+          </label>
+        </div>
+
+        <div id="notification" class="hidden">
+          Terima kasih telah mengisi form!
+          <span class="close-btn" onclick="closeNotification()">&times;</span>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        const toggle = document.querySelector(".toggle");
+        const navbar = document.querySelector(".navbar ul");
+        toggle.classList.toggle("active");
+        navbar.classList.toggle("active");
+      }
+
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const notification = document.getElementById("notification");
+          notification.classList.remove("hidden");
+          notification.classList.add("fade-in");
+          setTimeout(() => {
+            notification.classList.remove("fade-in");
+            notification.classList.add("fade-out");
+          }, 3000);
+
+          this.reset();
+        });
+
+      function closeNotification() {
+        const notification = document.getElementById("notification");
+        notification.classList.add("hidden");
+        notification.classList.remove("fade-out", "fade-in");
+      }
+    </script>
+  </body>
+</html>
